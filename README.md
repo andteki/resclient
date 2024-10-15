@@ -22,8 +22,15 @@ The client class is capable of token-based authentication, which is currently no
 
 ## Download
 
+<!--
 * [https://github.com/andteki/resclient/releases/](https://github.com/andteki/resclient/releases/)
+-->
 
+```bash
+git clone https://github.com/andteki/resclient.git
+```
+
+<!-- 
 ## Maven
 
 For the local usage, create a lib directory and put resclient_x.y.z.jar there. Rewrite teh version number to current one.
@@ -32,11 +39,12 @@ For the local usage, create a lib directory and put resclient_x.y.z.jar there. R
 <dependency>
     <groupId>hu.szit</groupId>
     <artifactId>saclient</artifactId>
-    <version>1.0.2</version>
+    <version>0.9.0</version>
     <scope>system</scope>
-    <systemPath>${basedir}/lib/saclient_1.0.2.jar</systemPath>
+    <systemPath>${basedir}/lib/saclient_0.9.0.jar</systemPath>
 </dependency>
 ```
+-->
 
 ## Example
 
