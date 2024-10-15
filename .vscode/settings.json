@@ -1,0 +1,15 @@
+{
+    "java.project.sourcePaths": [
+        "src",
+        "test"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/andras/Library/testng/jcommander-1.82.jar",
+        "/home/andras/Library/testng/slf4j-api-1.7.36.jar",
+        "/home/andras/Library/testng/testng-7.8.0.jar",
+        "/home/andras/Library/gson/gson-2.10.1.jar",
+        "/home/andras/Library/gson/gson-2.9.0.jar"
+    ]
+}
