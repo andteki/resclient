@@ -1,4 +1,4 @@
-# saclient
+# resclient
 
 Java Client for REST API.
 
