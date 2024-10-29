@@ -28,6 +28,8 @@ public class Convert {
      * Returns a value of type T.
      * 
      * @param     json      The JSON string to be converted.
+     * @param     <T>       The type of the Java object.
+     * @param     type      The type of the Java object.
      * @return    The answer is the Java object.
      */
     public static <T> ArrayList<T> toListObject(String json, Class<T> type) {
@@ -40,6 +42,8 @@ public class Convert {
      * Convert JSON string to Java object.
      * Returns a value of type T.
      * 
+     * @param     <T>       The type of the Java object.
+     * @param     type      The type of the Java object.
      * @param     json      JSON string for conversion.
      * @return              The answer is the Java object.
      */
@@ -52,6 +56,7 @@ public class Convert {
      * Convert Java ArrayList object to JSON string.
      * Returns a JSON string.
      * 
+     * @param     <T>       The type of the Java object.
      * @param     list      The Java ArrayList object to be converted.
      * @return              The answer is the JSON string.
      */    
@@ -64,6 +69,7 @@ public class Convert {
      * Convert Java object to JSON string.
      * Returns a JSON string.
      * 
+     * @param     <T>       The type of the Java object.
      * @param     object    The Java object to be converted.
      * @return              The answer is the JSON string.
      */    
