@@ -28,7 +28,7 @@ git clone https://github.com/andteki/resclient.git
 
 ## Maven
 
-For the local usage, create a lib directory and put resclient_x.y.z.jar there. Rewrite teh version number to current one.
+For the local usage, create a lib directory and put resclient-x.y.z.jar there. Rewrite the version number to current one.
 
 ```xml
 <dependency>
@@ -36,7 +36,7 @@ For the local usage, create a lib directory and put resclient_x.y.z.jar there. R
     <artifactId>resclient</artifactId>
     <version>1.0.0</version>
     <scope>system</scope>
-    <systemPath>${basedir}/lib/resclient_1.0.0.jar</systemPath>
+    <systemPath>${basedir}/lib/resclient-1.0.0.jar</systemPath>
 </dependency>
 ```
 
