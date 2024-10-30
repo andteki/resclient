@@ -20,7 +20,11 @@ The client class is capable of token-based authentication, which is currently no
 
 ## Download
 
+JAR fájl:
+
 * [https://github.com/andteki/resclient/releases/](https://github.com/andteki/resclient/releases/)
+
+Forrás:
 
 ```bash
 git clone https://github.com/andteki/resclient.git
