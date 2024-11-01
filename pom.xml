@@ -6,7 +6,7 @@
 
     <groupId>hu.szit</groupId>
     <artifactId>resclient</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <name>resclient</name>
     <description>Java REST API client library</description>
