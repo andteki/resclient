@@ -36,7 +36,7 @@ git clone https://github.com/andteki/resclient.git
 <dependency>
     <groupId>hu.szit</groupId>
     <artifactId>resclient</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.1</version>
 </dependency>
 ```
 
@@ -52,7 +52,7 @@ REST API request with GET method:
 
 ```java
 String url = "http://foo/bar";
-Client client = new Client();
+ResClient client = new ResClient();
 String result = client.get(url);
 System.out.println(result);
 ```
@@ -61,7 +61,7 @@ Adding a new user, using the POST method:
 
 ```java
 String url = "http://foo/bar";
-Client client = new Client();
+ResClient client = new ResClient();
 String body = "{ \"username\": \"Por Peter\" }";
 String result = client.post(url, body);
 System.out.println(result);
@@ -71,7 +71,7 @@ Update a user, using the PUT method:
 
 ```java
 String url = "http://foo/bar";
-Client client = new Client();
+ResClient client = new ResClient();
 String body = "{ \"username\": \"Por Peter\" }";
 String result = client.put(url + "/1", body);
 System.out.println(result);
@@ -81,7 +81,7 @@ Delete a user, using the DELETE method:
 
 ```java
 String url = "http://foo/bar";
-Client client = new Client();
+ResClient client = new ResClient();
 String result = client.delete(url + "/1");
 System.out.println(result);
 ```
@@ -103,9 +103,9 @@ Conversion:
 
 ```java
 String url = "http://foo/bar";
-Client client = new Client();
+ResClient client = new ResClient();
 String result = client.get(url);
-ArrayList<User> userList = Convert.toListObject(result, User.class);
+ArrayList<User> userList = ResConvert.toListObject(result, User.class);
 for(User user : userList) {
     System.out.println(user.name);
 }
@@ -116,9 +116,9 @@ Convert to simple object:
 ```java
 String host = "http://foo/bar";
 String url = host + "/1";
-Client client = new Client();
+ResClient client = new ResClient();
 String result = client.get(url);
-User user = Convert.toObject(result, User.class);        
+User user = ResConvert.toObject(result, User.class);        
 System.out.println(user.name);
 ```
 
@@ -143,7 +143,7 @@ Convert Java list to JSON string:
 ArrayList<User> userList = new ArrayList<>();
 userList.add(new User("Strong Steven", "strongs"));
 userList.add(new User("Little Mary", "littlem"));
-String json = Convert.listToJson(userList);
+String json = ResConvert.listToJson(userList);
 System.out.println(json);
 ```
 
