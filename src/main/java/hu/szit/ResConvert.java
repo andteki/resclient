@@ -16,12 +16,12 @@ import com.google.gson.reflect.TypeToken;
  * @version 1.0
  * @see     Gson
  */
-public class Convert {
+public class ResConvert {
 
     /**
      * Create an instance of this class.
      */
-    public Convert() {}
+    public ResConvert() {}
 
     /**
      * Convert JSON string to Java list object.

@@ -1,7 +1,7 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import hu.szit.Client;
+import hu.szit.ResClient;
 
 public class TypicodeTest {
     
@@ -11,7 +11,7 @@ public class TypicodeTest {
 
     @Test(enabled = true)
     public void testGetUsers() {
-        Client client = new Client();
+        ResClient client = new ResClient();
         String body = client.get(url);
         boolean ok = body.contains("city");
         System.out.println(body);
@@ -20,7 +20,7 @@ public class TypicodeTest {
 
     @Test(enabled = true)
     public void testPostUser() {
-        Client client = new Client();
+        ResClient client = new ResClient();
         String body = "{ \"name\": \"Por Péter\" }";
         String res = client.post(url, body);
         boolean ok = res.contains("name");
@@ -29,7 +29,7 @@ public class TypicodeTest {
 
     @Test(enabled = true)
     public void testPutUser() {
-        Client client = new Client();
+        ResClient client = new ResClient();
         String body = "{ \"name\": \"Por Péter\" }";
         String res = client.put(url + "/1", body);
         boolean ok = res.contains("name");
@@ -38,7 +38,7 @@ public class TypicodeTest {
 
     @Test(enabled = true)
     public void testDeleteUser() {
-        Client client = new Client();        
+        ResClient client = new ResClient();        
         String res = client.delete(url + "/2");
         boolean ok = res.contains("{}");
         Assert.assertTrue(ok);

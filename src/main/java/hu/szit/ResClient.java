@@ -25,13 +25,13 @@ import java.net.http.HttpResponse.BodyHandlers;
  * @version 1.0
  * @see     HttpClient
  */
-public class Client {
+public class ResClient {
     HttpClient client;
 
     /**
      * Create a instance of the Client class.
      */
-    public Client() {
+    public ResClient() {
         this.client = HttpClient.newHttpClient();        
     }
 
@@ -40,11 +40,11 @@ public class Client {
      * The result is a string.
      * 
      * @param     url    The server URL
-     * @param     args   Bearer token for authentication. Not necessary.
+     * @param     token  Bearer token for authentication. Not necessary.
      * @return           The response as JSON string.
      */
-    public String get(String url, String... args) {
-        HttpRequest request = genGetRequest(url, args);
+    public String get(String url, String... token) {
+        HttpRequest request = genGetRequest(url, token);
         return sendRequest(request);
     }
     private HttpRequest genGetRequest(String url, String... args) {
@@ -63,11 +63,11 @@ public class Client {
      * 
      * @param       url     The server URL.
      * @param       body    The new resource as JSON string.
-     * @param       args    Bearer token for authentication. Not necessary.
+     * @param       token   Bearer token for authentication. Not necessary.
      * @return      The created resource as JSON string.
      */    
-    public String post(String url, String body, String... args) {
-        HttpRequest request = this.genPostRequest(url, body, args);        
+    public String post(String url, String body, String... token) {
+        HttpRequest request = this.genPostRequest(url, body, token);        
         return this.sendRequest(request);
     }
     private HttpRequest genPostRequest(String url, String body, String... args) {
@@ -88,11 +88,11 @@ public class Client {
      * 
      * @param       url     The url of the server.
      * @param       body    The modified resource as JSON string.
-     * @param       args    The Bearer token for authentication. Not necessary.
+     * @param       token   The Bearer token for authentication. Not necessary.
      * @return      The modified resource as JSON string.
      */      
-    public String put(String url, String body, String... args) {
-        HttpRequest request = this.genPutRequest(url, body, args);
+    public String put(String url, String body, String... token) {
+        HttpRequest request = this.genPutRequest(url, body, token);
         return this.sendRequest(request);
     }
     private HttpRequest genPutRequest(String url, String body, String... args) {
@@ -112,11 +112,11 @@ public class Client {
      * The result is {}, if the operation was successful.
      * 
      * @param       url     The url of the server.
-     * @param       args    The Bearer token for authentication. Not necessary.
+     * @param       token   The Bearer token for authentication. Not necessary.
      * @return      The result is {}, if the operation was successful.
      */     
-    public String delete(String url, String... args) {
-        HttpRequest request = this.genDeleteRequest(url, args);
+    public String delete(String url, String... token) {
+        HttpRequest request = this.genDeleteRequest(url, token);
         return this.sendRequest(request);
     }
     private HttpRequest genDeleteRequest(String url, String... args) {
