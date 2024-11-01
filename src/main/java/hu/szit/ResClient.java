@@ -15,7 +15,7 @@ import java.net.http.HttpResponse.BodyHandlers;
  * 
  * Example:
  * <pre>
- * Client client = new Client();
+ * ResClient client = new ResClient();
  * String result = client.get(url);
  * System.out.println(result);
  * </pre>
