@@ -13,7 +13,7 @@ import com.google.gson.reflect.TypeToken;
  * 
  * @author Sallai András
  * @author szit.hu
- * @version 1.0
+ * @version 1.1.2
  * @see     Gson
  */
 public class ResConvert {

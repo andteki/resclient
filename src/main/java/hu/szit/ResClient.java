@@ -22,7 +22,7 @@ import java.net.http.HttpResponse.BodyHandlers;
  * 
  * @author Sallai András
  * @author szit.hu
- * @version 1.0
+ * @version 1.1.2
  * @see     HttpClient
  */
 public class ResClient {
