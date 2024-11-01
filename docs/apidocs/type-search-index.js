@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"hu.szit","l":"Client"},{"p":"hu.szit","l":"Convert"}];updateSearchResults();

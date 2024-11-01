@@ -37,14 +37,6 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.10.1</version>
-                <configuration>
-                    <outputDirectory>${basedir}/docs</outputDirectory>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
                 <version>3.2.1</version>
                 <executions>
@@ -74,13 +66,13 @@
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>1.5</version>
                 <executions>
-                <execution>
-                <id>sign-artifacts</id>
-                <phase>verify</phase>
-                <goals>
-                <goal>sign</goal>
-                </goals>
-                </execution>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
@@ -95,26 +87,26 @@
         </plugins>
     </build>
 
-  <licenses>
-    <license>
-      <name>MIT License</name>
-      <url>https://opensource.org/license/mit</url>
-    </license>
-  </licenses>
+    <licenses>
+        <license>
+        <name>MIT License</name>
+        <url>https://opensource.org/license/mit</url>
+        </license>
+    </licenses>
 
-  <developers>
-    <developer>
-      <name>Andrew Sallai</name>
-      <email>andteki288@gmail.com</email>
-      <organization>szit.hu</organization>
-      <organizationUrl>https://szit.hu</organizationUrl>
-    </developer>
-  </developers>
+    <developers>
+        <developer>
+        <name>Andrew Sallai</name>
+        <email>andteki288@gmail.com</email>
+        <organization>szit.hu</organization>
+        <organizationUrl>https://szit.hu</organizationUrl>
+        </developer>
+    </developers>
 
-  <scm>
-    <connection>scm:git:git://github.com/andteki/resclient.git</connection>
-    <developerConnection>scm:git:ssh://github.com:andteki/resclient.git</developerConnection>
-    <url>https://github.com/andteki/resclient/tree/master</url>
-   </scm>
+    <scm>
+        <connection>scm:git:git://github.com/andteki/resclient.git</connection>
+        <developerConnection>scm:git:ssh://github.com:andteki/resclient.git</developerConnection>
+        <url>https://github.com/andteki/resclient/tree/master</url>
+    </scm>
 
 </project>
