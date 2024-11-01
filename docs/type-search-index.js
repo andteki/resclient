@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"hu.szit","l":"ResClient"},{"p":"hu.szit","l":"ResConvert"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"hu.szit","l":"ResClient"},{"p":"hu.szit","l":"ResClientAsync"},{"p":"hu.szit","l":"ResConvert"}];updateSearchResults();

@@ -16,8 +16,8 @@ import java.util.concurrent.CompletableFuture;
  * 
  * Example:
  * <pre>
- * ResClient client = new ResClient();
- * String result = client.get(url);
+ * ResClientAsync client = new ResClientAsync();
+ * String result = client.get(url).join();
  * System.out.println(result);
  * </pre>
  * 
@@ -42,7 +42,7 @@ public class ResClientAsync {
      * 
      * @param     url    The server URL
      * @param     token  Bearer token for authentication. Not necessary.
-     * @return           The response as JSON string.
+     * @return    Returns a CompletableFuture containing the answer as String.
      */
     public CompletableFuture<String> get(String url, String... token) {
         HttpRequest request = genGetRequest(url, token);        
@@ -65,7 +65,7 @@ public class ResClientAsync {
      * @param       url     The server URL.
      * @param       body    The new resource as JSON string.
      * @param       token   Bearer token for authentication. Not necessary.
-     * @return      The created resource as JSON string.
+     * @return      Returns a CompletableFuture containing the answer as String.
      */    
     public CompletableFuture<String> post(String url, String body, String... token) {
         HttpRequest request = this.genPostRequest(url, body, token);        
@@ -90,7 +90,7 @@ public class ResClientAsync {
      * @param       url     The url of the server.
      * @param       body    The modified resource as JSON string.
      * @param       token   The Bearer token for authentication. Not necessary.
-     * @return      The modified resource as JSON string.
+     * @return      Returns a CompletableFuture containing the answer as String.
      */      
     public CompletableFuture<String> put(String url, String body, String... token) {
         HttpRequest request = this.genPutRequest(url, body, token);
@@ -114,7 +114,7 @@ public class ResClientAsync {
      * 
      * @param       url     The url of the server.
      * @param       token   The Bearer token for authentication. Not necessary.
-     * @return      The result is {}, if the operation was successful.
+     * @return      Returns a CompletableFuture containing the answer as String.
      */     
     public CompletableFuture<String> delete(String url, String... token) {
         HttpRequest request = this.genDeleteRequest(url, token);
@@ -148,7 +148,8 @@ public class ResClientAsync {
     }
     private CompletableFuture<String> trySendRequest(HttpRequest request) 
             throws IOException, InterruptedException {
-        return this.client.sendAsync(request, BodyHandlers.ofString()).thenApply(HttpResponse::body);
+        return this.client.sendAsync(request, BodyHandlers.ofString())
+        .thenApply(HttpResponse::body);
         
     }
 }

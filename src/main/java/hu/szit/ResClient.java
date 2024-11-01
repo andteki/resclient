@@ -41,7 +41,7 @@ public class ResClient {
      * 
      * @param     url    The server URL
      * @param     token  Bearer token for authentication. Not necessary.
-     * @return           The response as JSON string.
+     * @return    The response as JSON string.
      */
     public String get(String url, String... token) {
         HttpRequest request = genGetRequest(url, token);
