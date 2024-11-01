@@ -86,6 +86,46 @@ String result = client.delete(url + "/1");
 System.out.println(result);
 ```
 
+### RESAT API access asynchronous
+
+REST API request with GET method:
+
+```java
+String url = "http://foo/bar";
+ResClientAsync client = new ResClientAsync();
+String result = client.get(url).join();
+System.out.println(result);
+```
+
+Adding a new user, using the POST method:
+
+```java
+String url = "http://foo/bar";
+ResClientAsync client = new ResClientAsync();
+String body = "{ \"username\": \"Por Peter\" }";
+String result = client.post(url, body).join();
+System.out.println(result);
+```
+
+Update a user, using the PUT method:
+
+```java
+String url = "http://foo/bar";
+ResClientAsync client = new ResClientAsync();
+String body = "{ \"username\": \"Por Peter\" }";
+String result = client.put(url + "/1", body).join();
+System.out.println(result);
+```
+
+Delete a user, using the DELETE method:
+
+```java
+String url = "http://foo/bar";
+ResClientAsync client = new ResClientAsync();
+String result = client.delete(url + "/1").join();
+System.out.println(result);
+```
+
 ### JSON and Java object conversion
 
 Convert JSON string to Java object.
