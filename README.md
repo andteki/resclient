@@ -36,7 +36,7 @@ git clone https://github.com/andteki/resclient.git
 <dependency>
     <groupId>hu.szit</groupId>
     <artifactId>resclient</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.0</version>
 </dependency>
 ```
 
