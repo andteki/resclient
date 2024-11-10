@@ -1,7 +1,8 @@
+package hu.szit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import hu.szit.ResClient;
+import hu.szit.resclient.ResClient;
 
 public class TypicodeTest {
     

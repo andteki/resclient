@@ -1,3 +1,4 @@
+package hu.szit;
 public class User {    
   String name;
   String username;

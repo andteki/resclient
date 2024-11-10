@@ -1,3 +1,4 @@
+package hu.szit;
 public class Employee {
   String name;
   String city;

@@ -1,7 +1,8 @@
+package hu.szit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import hu.szit.ResClientAsync;
+import hu.szit.resclient.ResClientAsync;
 
 public class TypicodeTestAsync {
     
