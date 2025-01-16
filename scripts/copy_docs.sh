@@ -15,6 +15,7 @@
 # limitations under the License.
 
 # Javadoc generálása
+# Futtatás előtt futtasd:
 # mvn javadoc:javadoc
 
 # Ellenőrzés, hogy sikerült-e a Javadoc generálása

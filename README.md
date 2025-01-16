@@ -20,11 +20,11 @@ The client class is capable of token-based authentication, which is currently no
 
 ## Download
 
-JAR fájl:
+JAR file:
 
 * [https://github.com/andteki/resclient/releases/](https://github.com/andteki/resclient/releases/)
 
-Forrás:
+Source code:
 
 ```bash
 git clone https://github.com/andteki/resclient.git
@@ -36,7 +36,7 @@ git clone https://github.com/andteki/resclient.git
 <dependency>
     <groupId>hu.szit</groupId>
     <artifactId>resclient</artifactId>
-    <version>1.3.2</version>
+    <version>1.3.3</version>
 </dependency>
 ```
 
@@ -46,6 +46,15 @@ git clone https://github.com/andteki/resclient.git
 module valami {
     requires hu.szit.resclient;
     opens com.example to hu.szit.resclient;
+}
+```
+
+If you want to use ResConvert class:
+
+```java
+module valami {
+    requires hu.szit.resclient;
+    opens com.example to hu.szit.resclient, com.google.gson;
 }
 ```
 
