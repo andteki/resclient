@@ -148,6 +148,14 @@ System.out.println(result);
 
 Convert JSON string to Java object.
 
+If we are writing a modular program (using a module-info.java file), and the program's module is com.example, then we open this for the com.google.gson module.
+
+For example:
+
+```java
+opens com.example to javafx.fxml, hu.szit.resclient, com.google.gson;
+```
+
 Create a model class.
 
 ```java
